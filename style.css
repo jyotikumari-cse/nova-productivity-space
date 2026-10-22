@@ -1,0 +1,1349 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+--background: #080d19;
+--surface: #101829;
+--blue: #7198ff;
+--text: #f4f6ff;
+--muted: #9ba7bd;
+--border: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 90px;
+}
+
+body {
+background: var(--background);
+color: var(--text);
+font-family: 'DM Sans', sans-serif;
+line-height: 1.6;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+.navbar {
+width: 100%;
+min-height: 82px;
+padding: 20px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--border);
+}
+
+.logo {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 28px;
+font-weight: 700;
+letter-spacing: -1.5px;
+}
+
+.logo span,
+.hero h1 span,
+.closing h2 span {
+color: var(--blue);
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+nav a {
+color: var(--muted);
+font-size: 14px;
+transition: color 0.2s ease;
+}
+
+nav a:hover {
+color: var(--text);
+}
+
+nav .nav-button {
+color: var(--text);
+border: 1px solid var(--border);
+padding: 10px 17px;
+border-radius: 8px;
+}
+
+.hero {
+min-height: 580px;
+padding: 110px 20px 90px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+background: radial-gradient(
+ellipse at 50% 0%,
+rgba(70, 105, 210, 0.17),
+transparent 60%
+);
+}
+
+.badge {
+border: 1px solid var(--border);
+background: rgba(255, 255, 255, 0.03);
+padding: 8px 13px;
+border-radius: 30px;
+color: #c3cce0;
+font-size: 11px;
+letter-spacing: 1.5px;
+}
+
+.status-dot {
+display: inline-block;
+width: 7px;
+height: 7px;
+margin-right: 7px;
+border-radius: 50%;
+background: #7ce0ad;
+}
+
+.hero h1 {
+margin-top: 30px;
+font-family: 'Space Grotesk', sans-serif;
+font-size: clamp(44px, 7vw, 76px);
+line-height: 1.12;
+letter-spacing: -3px;
+}
+
+.hero-description {
+max-width: 560px;
+margin-top: 22px;
+color: var(--muted);
+font-size: 16px;
+}
+
+.hero-buttons {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button {
+padding: 13px 21px;
+border-radius: 8px;
+font-size: 14px;
+font-weight: 600;
+transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary-button {
+color: #08101f;
+background: var(--blue);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+transform: translateY(-2px);
+}
+
+.secondary-button {
+border: 1px solid var(--border);
+background: rgba(255, 255, 255, 0.025);
+}
+
+.hero-note {
+margin-top: 26px;
+font-size: 12px;
+color: #75839e;
+}
+
+.features {
+padding: 75px 8% 100px;
+}
+
+.section-heading {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.eyebrow {
+color: var(--blue);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.section-heading h2,
+.closing h2 {
+margin-top: 12px;
+font-family: 'Space Grotesk', sans-serif;
+font-size: clamp(28px, 4vw, 42px);
+letter-spacing: -1.5px;
+}
+
+.section-heading > p:last-child {
+margin-top: 10px;
+color: var(--muted);
+font-size: 14px;
+}
+
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+}
+
+.feature-card {
+padding: 25px 21px;
+min-height: 235px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 14px;
+transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+border-color: rgba(113, 152, 255, 0.5);
+}
+
+.feature-icon {
+width: 42px;
+height: 42px;
+display: grid;
+place-items: center;
+margin-bottom: 23px;
+color: var(--blue);
+background: rgba(113, 152, 255, 0.11);
+border-radius: 10px;
+font-size: 21px;
+}
+
+.feature-card h3 {
+font-size: 16px;
+margin-bottom: 9px;
+}
+
+.feature-card p {
+color: var(--muted);
+font-size: 13px;
+line-height: 1.8;
+}
+
+.card-link {
+display: inline-block;
+margin-top: 17px;
+color: var(--blue);
+font-size: 12px;
+}
+
+.closing {
+padding: 65px 20px;
+text-align: center;
+border-top: 1px solid var(--border);
+background: rgba(255, 255, 255, 0.015);
+}
+
+.closing p {
+color: var(--muted);
+font-size: 14px;
+}
+
+footer {
+padding: 28px 8%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+flex-wrap: wrap;
+border-top: 1px solid var(--border);
+}
+
+footer .logo {
+font-size: 23px;
+}
+
+footer p {
+color: var(--muted);
+font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+.feature-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 600px) {
+.navbar {
+padding: 18px 5%;
+}
+
+nav {
+    gap: 13px;
+}
+
+nav a {
+    font-size: 12px;
+}
+
+nav .nav-button {
+    padding: 8px 10px;
+}
+
+.hero {
+    padding: 85px 20px 70px;
+    min-height: auto;
+}
+
+.hero h1 {
+    letter-spacing: -2px;
+}
+
+.hero-description {
+    font-size: 14px;
+}
+
+.features {
+    padding: 60px 5%;
+}
+
+.feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.feature-card {
+    min-height: auto;
+}
+
+footer {
+    flex-direction: column;
+    text-align: center;
+}
+
+}
+/* TASK MANAGER */
+
+.task-section {
+    padding: 80px 8%;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.task-app {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+#task-form {
+    display: flex;
+    gap: 12px;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    color: var(--text);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font: inherit;
+}
+
+#task-input:focus {
+    border-color: var(--blue);
+}
+
+#task-form button {
+    padding: 12px 18px;
+    color: #08101f;
+    background: var(--blue);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.task-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#clear-completed {
+    padding: 6px 0;
+    color: var(--blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+}
+
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--blue);
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.delete-task {
+    padding: 6px 10px;
+    color: #ff9292;
+    background: rgba(255, 100, 100, 0.08);
+    border: 1px solid rgba(255, 100, 100, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#empty-message {
+    padding: 18px 0;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #task-form {
+        flex-direction: column;
+    }
+
+    #task-form button {
+        padding: 14px;
+    }
+
+    .task-app {
+        padding: 16px;
+    }
+}
+/* NOVA TASK MANAGER */
+
+.task-section {
+    padding: 80px 8%;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.task-app {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+#task-form {
+    display: flex;
+    gap: 12px;
+}
+
+#task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    color: var(--text);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font: inherit;
+}
+
+#task-input:focus {
+    border-color: var(--blue);
+}
+
+#task-form button {
+    padding: 12px 18px;
+    color: #08101f;
+    background: var(--blue);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.task-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#clear-completed {
+    padding: 6px 0;
+    color: var(--blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+}
+
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--blue);
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-text {
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.delete-task {
+    padding: 6px 10px;
+    color: #ff9292;
+    background: rgba(255, 100, 100, 0.08);
+    border: 1px solid rgba(255, 100, 100, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#empty-message {
+    padding: 18px 0;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #task-form {
+        flex-direction: column;
+    }
+
+    #task-form button {
+        padding: 14px;
+    }
+
+    .task-app {
+        padding: 16px;
+    }
+}
+#tasks {
+    scroll-margin-top: 20px;
+}
+#tasks {
+scroll-margin-top: 40px;
+}
+/* NOVA STUDY PLANNER */
+
+.study-section {
+padding: 80px 8%;
+border-top: 1px solid var(--border);
+background: rgba(255, 255, 255, 0.015);
+}
+
+.study-app {
+max-width: 700px;
+margin: 0 auto;
+padding: 25px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 16px;
+}
+
+#study-form {
+display: flex;
+gap: 12px;
+}
+
+#study-input {
+flex: 1;
+min-width: 0;
+padding: 14px;
+color: var(--text);
+background: var(--background);
+border: 1px solid var(--border);
+border-radius: 8px;
+outline: none;
+font: inherit;
+}
+
+#study-input:focus {
+border-color: var(--blue);
+}
+
+#study-form button {
+padding: 12px 18px;
+color: #08101f;
+background: var(--blue);
+border: none;
+border-radius: 8px;
+font-weight: 700;
+cursor: pointer;
+}
+
+.study-summary {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px;
+margin: 22px 0 12px;
+color: var(--muted);
+font-size: 13px;
+}
+
+.study-progress-track {
+height: 7px;
+overflow: hidden;
+background: var(--background);
+border-radius: 10px;
+}
+
+#study-progress-bar {
+width: 0%;
+height: 100%;
+background: var(--blue);
+border-radius: 10px;
+transition: width 0.3s ease;
+}
+
+#study-list {
+list-style: none;
+margin-top: 12px;
+}
+
+.study-item {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 14px 0;
+border-top: 1px solid var(--border);
+}
+
+.study-item input[type="checkbox"] {
+width: 17px;
+height: 17px;
+accent-color: var(--blue);
+cursor: pointer;
+}
+
+.study-text {
+flex: 1;
+overflow-wrap: anywhere;
+}
+
+.study-item.completed .study-text {
+color: var(--muted);
+text-decoration: line-through;
+}
+
+.delete-study {
+padding: 6px 10px;
+color: #ff9292;
+background: rgba(255, 100, 100, 0.08);
+border: 1px solid rgba(255, 100, 100, 0.15);
+border-radius: 6px;
+cursor: pointer;
+}
+
+#study-empty {
+padding: 18px 0;
+color: var(--muted);
+font-size: 14px;
+text-align: center;
+}
+
+@media (max-width: 500px) {
+#study-form {
+flex-direction: column;
+}
+
+#study-form button {
+    padding: 14px;
+}
+
+.study-app {
+    padding: 16px;
+}
+
+}
+/* NOVA QUICK NOTES */
+
+.notes-section {
+padding: 80px 8%;
+border-top: 1px solid var(--border);
+background: rgba(255, 255, 255, 0.015);
+}
+
+.notes-app {
+max-width: 700px;
+margin: 0 auto;
+padding: 25px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 16px;
+}
+
+#notes-form {
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+#note-title,
+#note-content {
+width: 100%;
+padding: 14px;
+color: var(--text);
+background: var(--background);
+border: 1px solid var(--border);
+border-radius: 8px;
+outline: none;
+font: inherit;
+}
+
+#note-title:focus,
+#note-content:focus {
+border-color: var(--blue);
+}
+
+#note-content {
+resize: vertical;
+min-height: 120px;
+line-height: 1.6;
+}
+
+#notes-form button {
+align-self: flex-start;
+padding: 12px 20px;
+color: #08101f;
+background: var(--blue);
+border: none;
+border-radius: 8px;
+font-weight: 700;
+cursor: pointer;
+}
+
+.notes-summary {
+margin: 24px 0 12px;
+color: var(--muted);
+font-size: 13px;
+}
+
+.note-card {
+padding: 18px;
+margin-top: 12px;
+background: var(--background);
+border: 1px solid var(--border);
+border-radius: 10px;
+}
+
+.note-card h3 {
+margin-bottom: 10px;
+color: var(--text);
+overflow-wrap: anywhere;
+}
+
+.note-card p {
+color: var(--muted);
+line-height: 1.7;
+white-space: pre-wrap;
+overflow-wrap: anywhere;
+}
+
+.delete-note {
+margin-top: 14px;
+padding: 8px 12px;
+color: #ff9292;
+background: rgba(255, 100, 100, 0.08);
+border: 1px solid rgba(255, 100, 100, 0.15);
+border-radius: 6px;
+cursor: pointer;
+}
+
+#notes-empty {
+padding: 20px 0;
+color: var(--muted);
+font-size: 14px;
+text-align: center;
+}
+
+@media (max-width: 500px) {
+.notes-app {
+padding: 16px;
+}
+
+#notes-form button {
+    width: 100%;
+    padding: 14px;
+}
+
+}
+/* NOVA CAREER TRACKER */
+
+.career-section {
+padding: 80px 8%;
+}
+
+.career-app {
+max-width: 850px;
+margin: 35px auto 0;
+padding: 30px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 24px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.career-welcome {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+padding: 25px;
+margin-bottom: 25px;
+border-radius: 18px;
+background: linear-gradient(135deg, #101d3a, #173f85);
+color: white;
+}
+
+.career-welcome h3 {
+font-size: 25px;
+margin: 10px 0;
+}
+
+.career-welcome p {
+line-height: 1.7;
+}
+
+.career-icon {
+font-size: 48px;
+}
+
+#career-form {
+display: flex;
+gap: 12px;
+margin-bottom: 30px;
+}
+
+#career-input {
+flex: 1;
+min-width: 0;
+padding: 14px 16px;
+border: 1px solid var(--border);
+border-radius: 12px;
+background: var(--background);
+color: var(--text);
+font: inherit;
+}
+
+#career-form button {
+padding: 14px 20px;
+border: none;
+border-radius: 12px;
+background: var(--blue);
+color: white;
+font: inherit;
+font-weight: 600;
+cursor: pointer;
+transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#career-form button:hover {
+transform: translateY(-2px);
+opacity: 0.9;
+}
+
+.career-summary {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+margin-bottom: 22px;
+}
+
+.career-stat {
+padding: 20px 12px;
+text-align: center;
+background: var(--background);
+border: 1px solid var(--border);
+border-radius: 16px;
+}
+
+.career-stat span {
+color: var(--blue);
+font-size: 28px;
+font-weight: 700;
+}
+
+.career-stat p {
+margin: 8px 0 0;
+color: var(--muted);
+font-size: 14px;
+}
+
+.career-progress-track {
+height: 10px;
+overflow: hidden;
+background: var(--border);
+border-radius: 20px;
+margin-bottom: 25px;
+}
+
+#career-progress-bar {
+width: 0%;
+height: 100%;
+background: linear-gradient(90deg, #3978ff, #72b5ff);
+border-radius: 20px;
+transition: width 0.4s ease;
+}
+
+#career-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.career-item {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 16px;
+margin-bottom: 12px;
+border: 1px solid var(--border);
+border-radius: 14px;
+background: var(--background);
+}
+
+.career-item span {
+flex: 1;
+overflow-wrap: anywhere;
+color: var(--text);
+}
+
+.career-item.completed span {
+text-decoration: line-through;
+opacity: 0.6;
+}
+
+.career-item input[type="checkbox"] {
+width: 18px;
+height: 18px;
+accent-color: var(--blue);
+cursor: pointer;
+}
+
+.career-delete {
+padding: 8px 12px;
+border: 1px solid var(--border);
+border-radius: 9px;
+background: transparent;
+color: var(--text);
+cursor: pointer;
+}
+
+.career-delete:hover {
+background: rgba(255, 70, 70, 0.12);
+}
+
+#career-empty {
+text-align: center;
+color: var(--muted);
+padding: 15px 0;
+}
+
+@media (max-width: 600px) {
+.career-section {
+padding: 50px 5%;
+}
+
+```
+.career-app {
+    padding: 18px;
+}
+
+.career-welcome {
+    padding: 18px;
+}
+
+.career-welcome h3 {
+    font-size: 21px;
+}
+
+.career-icon {
+    font-size: 34px;
+}
+
+#career-form {
+    flex-direction: column;
+}
+
+#career-form button {
+    width: 100%;
+}
+
+.career-summary {
+    gap: 8px;
+}
+
+.career-stat {
+    padding: 16px 5px;
+}
+
+.career-stat span {
+    font-size: 23px;
+}
+
+.career-stat p {
+    font-size: 12px;
+}
+
+.career-item {
+    padding: 12px;
+}
+
+}
+
+/* NOVA SMART DASHBOARD */
+
+.dashboard-section {
+padding: 80px 8%;
+}
+
+.dashboard-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 20px;
+max-width: 1000px;
+margin: 35px auto;
+}
+
+.dashboard-card {
+position: relative;
+padding: 26px;
+overflow: hidden;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 20px;
+transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dashboard-card:hover {
+transform: translateY(-5px);
+border-color: var(--blue);
+}
+
+.dashboard-card-top {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 24px;
+}
+
+.dashboard-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 42px;
+height: 42px;
+border-radius: 13px;
+background: rgba(65, 125, 255, 0.13);
+font-size: 21px;
+}
+
+.dashboard-label {
+color: var(--muted);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.2px;
+}
+
+.dashboard-card h3 {
+margin: 0 0 8px;
+color: var(--text);
+font-size: 38px;
+font-weight: 700;
+}
+
+.dashboard-card > p {
+margin: 0;
+color: var(--muted);
+font-size: 14px;
+}
+
+.dashboard-bottom {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+max-width: 1000px;
+margin: 35px auto 0;
+padding: 30px;
+border: 1px solid var(--border);
+border-radius: 22px;
+background: linear-gradient(120deg, #101d3a, #173f85);
+color: white;
+}
+
+.dashboard-bottom h3 {
+margin: 12px 0;
+font-size: 25px;
+}
+
+.dashboard-bottom p:last-child {
+max-width: 550px;
+margin-bottom: 0;
+line-height: 1.8;
+color: #d5e1ff;
+}
+
+.dashboard-bottom-icon {
+font-size: 58px;
+color: #a9c7ff;
+}
+
+@media (max-width: 600px) {
+.dashboard-section {
+padding: 50px 5%;
+}
+
+.dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+.dashboard-card {
+    padding: 22px;
+}
+
+.dashboard-bottom {
+    padding: 22px;
+}
+
+.dashboard-bottom h3 {
+    font-size: 21px;
+}
+
+.dashboard-bottom-icon {
+    font-size: 38px;
+}
+
+}
+
+/* NOVA PREMIUM PROGRESS CHART */
+
+.progress-chart-section {
+    padding: 50px 8%;
+}
+
+.progress-chart-card {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.progress-chart-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.progress-chart-heading h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 24px;
+}
+
+.progress-chart-heading p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.progress-chart-badge {
+    padding: 9px 14px;
+    border-radius: 30px;
+    background: rgba(65, 125, 255, 0.14);
+    color: #75a2ff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.progress-chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 18px;
+    height: 230px;
+    padding-top: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.progress-chart-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 55px;
+    height: 100%;
+}
+
+.progress-chart-bar {
+    width: 100%;
+    min-height: 8px;
+    border-radius: 10px 10px 3px 3px;
+    background: linear-gradient(180deg, #73a5ff, #4169e1);
+    transition: height 0.5s ease;
+    box-shadow: 0 0 18px rgba(65, 105, 225, 0.18);
+}
+
+.progress-chart-column span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.progress-chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.progress-chart-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5688ff;
+}
+
+@media (max-width: 600px) {
+    .progress-chart-section {
+        padding: 35px 5%;
+    }
+
+    .progress-chart-card {
+        padding: 20px 14px;
+    }
+
+    .progress-chart-heading h3 {
+        font-size: 19px;
+    }
+
+    .progress-chart-bars {
+        gap: 9px;
+        height: 180px;
+    }
+
+    .progress-chart-column {
+        width: 35px;
+    }
+}
+
+/* NOVA PREMIUM ANIMATIONS */
+
+.dashboard-card,
+.career-stat,
+.progress-chart-card,
+.task-app,
+.career-app {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.dashboard-card:hover,
+.progress-chart-card:hover,
+.task-app:hover,
+.career-app:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(65, 125, 255, 0.12);
+}
+
+.dashboard-bottom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-bottom:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(65, 125, 255, 0.15);
+}
+
+.progress-chart-bar {
+    transition: height 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* NOVA VISIBLE HOVER FIX */
+
+.dashboard-card:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 15px 35px rgba(65, 125, 255, 0.3) !important;
+    border-color: var(--blue) !important;
+}

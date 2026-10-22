@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NOVA helps you organize your tasks, studies, notes, and goals in one place.">
+    <title>NOVA — Your Productivity Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">NOVA<span>.</span></a>
+
+ <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#study">Study</a>
+    <a href="#notes">Notes</a>
+    <a href="#career">Career</a>
+    <a href="#features">Features</a>
+    <a href="#get-started" class="nav-button">Get Started ↗</a>
+</nav>
+
+</header>
+
+<main>
+    <section class="hero" id="about">
+        <div class="badge">
+            <span class="status-dot"></span>
+            YOUR SPACE. YOUR GOALS.
+        </div>
+
+        <h1>Make space for<br>what <span>matters.</span></h1>
+
+        <p class="hero-description">
+            One simple space to organize your tasks, plan your studies,
+            capture your ideas, and move closer to your goals.
+        </p>
+
+        <div class="hero-buttons" id="get-started">
+            <a href="#features" class="primary-button">Explore NOVA ↗</a>
+            <a href="#features" class="secondary-button">Discover features</a>
+        </div>
+
+        <div class="hero-note">
+            Less chaos. More clarity.
+        </div>
+    </section>
+    
+<!-- NOVA SMART DASHBOARD -->
+
+<section class="dashboard-section" id="dashboard">
+    <div class="section-heading">
+        <p class="eyebrow">YOUR PERSONAL OVERVIEW</p>
+        <h2>Welcome to your dashboard.</h2>
+        <p>One space to see your progress, celebrate small wins, and keep moving forward.</p>
+    </div>
+
+<div class="dashboard-grid">
+    <article class="dashboard-card">
+        <div class="dashboard-card-top">
+            <span class="dashboard-icon">✓</span>
+            <span class="dashboard-label">TASK MANAGER</span>
+        </div>
+        <h3 id="dashboard-tasks">0</h3>
+        <p>Tasks completed</p>
+    </article>
+
+    <article class="dashboard-card">
+        <div class="dashboard-card-top">
+            <span class="dashboard-icon">📚</span>
+            <span class="dashboard-label">STUDY PLANNER</span>
+        </div>
+        <h3 id="dashboard-study">0%</h3>
+        <p>Study progress</p>
+    </article>
+
+    <article class="dashboard-card">
+        <div class="dashboard-card-top">
+            <span class="dashboard-icon">✎</span>
+            <span class="dashboard-label">QUICK NOTES</span>
+        </div>
+        <h3 id="dashboard-notes">0</h3>
+        <p>Notes saved</p>
+    </article>
+
+    <article class="dashboard-card">
+        <div class="dashboard-card-top">
+            <span class="dashboard-icon">🚀</span>
+            <span class="dashboard-label">CAREER TRACKER</span>
+        </div>
+        <h3 id="dashboard-career">0%</h3>
+        <p>Career goals completed</p>
+    </article>
+</div>
+
+<div class="dashboard-bottom">
+    <div>
+        <p class="eyebrow">YOUR DAILY REMINDER</p>
+        <h3>Progress over perfection.</h3>
+        <p>Every little step counts. Keep learning, keep growing, and trust your journey.</p>
+    </div>
+    <div class="dashboard-bottom-icon">✦</div>
+</div>
+
+</section>
+<!-- NOVA PROGRESS CHART -->
+<section class="progress-chart-section" id="progress-chart">
+
+    <div class="section-heading">
+        <p class="eyebrow">YOUR PRODUCTIVITY</p>
+        <h2>Track your progress.</h2>
+        <p>Small steps every day lead to big achievements.</p>
+    </div>
+
+    <div class="progress-chart-card">
+
+        <div class="progress-chart-heading">
+            <div>
+                <h3>Your Weekly Activity</h3>
+                <p>Visualize your productivity.</p>
+            </div>
+
+            <span class="progress-chart-badge">WEEKLY</span>
+        </div>
+
+        <div class="progress-chart-bars" id="progress-chart-bars">
+
+    <div class="progress-chart-column">
+        <div class="progress-chart-bar" id="chart-task-bar"></div>
+        <span>Tasks</span>
+    </div>
+
+    <div class="progress-chart-column">
+        <div class="progress-chart-bar" id="chart-study-bar"></div>
+        <span>Study</span>
+    </div>
+
+    <div class="progress-chart-column">
+        <div class="progress-chart-bar" id="chart-notes-bar"></div>
+        <span>Notes</span>
+    </div>
+
+    <div class="progress-chart-column">
+        <div class="progress-chart-bar" id="chart-career-bar"></div>
+        <span>Career</span>
+    </div>
+
+</div>
+
+        <div class="progress-chart-legend">
+            <span class="progress-chart-dot"></span>
+            <span>Daily productivity</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- TASK MANAGER -->
+<section class="task-section" id="tasks">
+    <div class="section-heading">
+        <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+        <h2>One task at a time.</h2>
+        <p>Write it down. Get it done. Keep moving forward.</p>
+    </div>
+
+    <div class="task-app">
+        <form id="task-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="What do you need to do?"
+                maxlength="150"
+                required
+            >
+            <button type="submit">+ Add Task</button>
+        </form>
+
+        <div class="task-summary">
+            <span id="task-count">0 tasks</span>
+            <button type="button" id="clear-completed">
+                Clear completed
+            </button>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <p id="empty-message">Your task list is empty. Add your first task! ✨</p>
+    </div>
+</section>
+
+<!-- STUDY PLANNER -->
+
+<section class="study-section" id="study">
+    <div class="section-heading">
+        <p class="eyebrow">YOUR LEARNING SPACE</p>
+        <h2>Make learning a habit.</h2>
+        <p>Plan your subjects, organize your study tasks, and track your progress.</p>
+    </div>
+
+<div class="study-app">
+    <form id="study-form">
+        <input
+            type="text"
+            id="study-input"
+            placeholder="Enter a subject or study task..."
+            maxlength="150"
+            required
+        >
+        <button type="submit">+ Add Study Task</button>
+    </form>
+
+    <div class="study-summary">
+        <span id="study-count">0 study tasks</span>
+        <span id="study-progress">0% completed</span>
+    </div>
+
+    <div class="study-progress-track">
+        <div id="study-progress-bar"></div>
+    </div>
+
+    <ul id="study-list"></ul>
+
+    <p id="study-empty">Your study plan is empty. Add your first task! 📚</p>
+</div>
+
+</section>
+<!-- QUICK NOTES -->
+
+<section class="notes-section" id="notes">
+    <div class="section-heading">
+        <p class="eyebrow">YOUR DIGITAL NOTEBOOK</p>
+        <h2>Ideas worth keeping.</h2>
+        <p>Capture your thoughts, save important information, and keep your ideas organized.</p>
+    </div>
+
+<div class="notes-app">
+    <form id="notes-form">
+        <input
+            type="text"
+            id="note-title"
+            placeholder="Note title..."
+            maxlength="100"
+            required
+        >
+
+        <textarea
+            id="note-content"
+            placeholder="Write your thoughts here..."
+            maxlength="5000"
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit">+ Save Note</button>
+    </form>
+
+    <div class="notes-summary">
+        <span id="notes-count">0 notes saved</span>
+    </div>
+
+    <div id="notes-list"></div>
+
+    <p id="notes-empty">Your notebook is empty. Save your first idea! ✨</p>
+</div>
+
+</section>
+
+<!-- CAREER TRACKER -->
+
+<section class="career-section" id="career">
+    <div class="section-heading">
+        <p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+        <h2>Build your future.</h2>
+        <p>Track your skills, projects, and career goals in one place.</p>
+    </div>
+
+<div class="career-app">
+    <div class="career-welcome">
+        <div>
+            <p class="eyebrow">YOUR CAREER DASHBOARD</p>
+            <h3>Small steps. Big ambitions.</h3>
+            <p>Every skill you learn brings you closer to your dream career.</p>
+        </div>
+        <div class="career-icon">🚀</div>
+    </div>
+
+    <form id="career-form">
+        <input type="text" id="career-input"
+            placeholder="Add a skill or career goal..."
+            maxlength="150" required>
+        <button type="submit">+ Add Goal</button>
+    </form>
+
+    <div class="career-summary">
+        <div class="career-stat">
+            <span id="career-total">0</span>
+            <p>Total Goals</p>
+        </div>
+        <div class="career-stat">
+            <span id="career-completed">0</span>
+            <p>Completed</p>
+        </div>
+        <div class="career-stat">
+            <span id="career-percentage">0%</span>
+            <p>Progress</p>
+        </div>
+    </div>
+
+    <div class="career-progress-track">
+        <div id="career-progress-bar"></div>
+    </div>
+
+    <ul id="career-list"></ul>
+
+    <p id="career-empty">
+        Your journey starts here. Add your first career goal! ✨
+    </p>
+</div>
+
+</section>
+
+<section class="features" id="features">
+        <div class="section-heading">
+            <p class="eyebrow">BUILT AROUND YOU</p>
+            <h2>Everything in one place.</h2>
+            <p>Small steps today. Bigger possibilities tomorrow.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon">✓</div>
+                <h3>Task Manager</h3>
+                <p>Keep your daily tasks organized and stay on track.</p>
+            <a href="#tasks" class="card-link">Stay organized ↗</a>   
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">◷</div>
+                <h3>Study Planner</h3>
+                <p>Bring structure to your study sessions and goals.</p>
+                <a href="#study" class="card-link">Plan smarter ↗</a>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">✎</div>
+                <h3>Quick Notes</h3>
+                <p>Keep your thoughts and important ideas together.</p>
+                <a href="#notes" class="card-link">Capture ideas ↗</a>         
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">↗</div>
+                <h3>Career Tracker</h3>
+                <p>Keep an eye on internships and future opportunities.</p>
+                <a href="#career" class="card-link">Grow your future ↗</a>
+
+            </article>
+        </div>
+    </section>
+
+    <section class="closing">
+        <p>Your next chapter starts here.</p>
+        <h2>Make today <span>count.</span></h2>
+    </section>
+</main>
+
+<footer>
+    <a href="#" class="logo">NOVA<span>.</span></a>
+    <p>Made with curiosity and a little ambition.</p>
+    <p class="copyright">© 2026 NOVA. Built to grow.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
